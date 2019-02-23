@@ -123,6 +123,7 @@ If you want to do more, here's the full node specification
 
 ```javascript
 {
+  nodeId: 1,
   text: "Node 1",
   icon: "glyphicon glyphicon-stop",
   selectedIcon: "glyphicon glyphicon-stop",
@@ -147,6 +148,11 @@ If you want to do more, here's the full node specification
 ### Node Properties
 
 The following properties are defined to allow node level overrides, such as node specific icons, colours and tags.
+
+#### nodeId
+`Integer` `required`
+
+The node attr 'nodeid' for a given tree node, must set.
 
 #### text
 `String` `Mandatory`
@@ -366,6 +372,11 @@ Whether or not to display tags to the right of each node.  The values of which m
 String, class names(s).  Default: "glyphicon glyphicon-unchecked" as defined by [Bootstrap Glyphicons](http://getbootstrap.com/components/#glyphicons)
 
 Sets the icon to be as an unchecked checkbox, used in conjunction with showCheckbox.
+
+#### autoParentChecked
+Boolean.  Default: false
+
+Whether or not auto-check or auto-uncheck parent/children nodes.
 
 
 ## Methods
